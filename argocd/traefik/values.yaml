@@ -6,11 +6,10 @@ traefik:
   additionalArguments:
     - --metrics.prometheus=true
     - --serversTransport.insecureSkipVerify=true
+    - --api.dashboard=true
   logs:
     access:
       enabled: true
   tlsOptions:
     default:
       minVersion: VersionTLS12
-  api:
-    dashboard: true
